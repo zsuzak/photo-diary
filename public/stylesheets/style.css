@@ -36,6 +36,7 @@ img {
     height: auto;
     margin-bottom: 3%;
     width: 100%;
+    filter: grayscale(100%);
 }
 
 ul.nav {
