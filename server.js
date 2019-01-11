@@ -19,6 +19,10 @@ app.get('/about', (req, res) => {
      res.render('about.hbs');
 });
 
+app.get('*', (req, res) => {
+	res.redirect('/');
+});
+
 app.listen(port, () => {
 	console.log(`Server is up on port ${port}`);
 });
