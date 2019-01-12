@@ -10,6 +10,11 @@ const axios = require('axios');
 axios.get('https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&format=json&api_key=4bfa503b17ffb78a357c40b61b07bfb1&nojsoncallback=1&user_id=jamessphotography')
         .then((res) => {
             console.log(res.data.photos);
+
+            // For each photo id call:
+            // flickr.photos.getSizes
+            // Create an img tag with src = to the response image url
+
         })
         .catch((e) => {
             console.log(e);
