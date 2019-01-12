@@ -1,3 +1,9 @@
+// Key:
+// 3f512a426170f3b1734a0f4d2dbf5048
+
+// Secret:
+// 7a23164b892572de
+
 const express = require('express');
 const hbs = require('hbs');
 
