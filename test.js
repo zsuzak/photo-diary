@@ -31,26 +31,3 @@ axios.get('https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&
         .catch((e) => {
             console.log(e);
         });
-
-hbs.registerHelper('getImages', () => {
-    axios.get('https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&format=json&api_key=3f512a426170f3b1734a0f4d2dbf5048&nojsoncallback=1&user_id=jamessphotography')
-    .then((res) => {
-        for (let i = 0; i < res.data.photos.photo.length; i++) {
-            let id = res.data.photos.photo[i].id;
-            let url = `https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=febb2a6247e2bfe3935a3bdd0ceb07fc&photo_id=${id}&format=json&nojsoncallback=1`;
-            let html;
-            let src;
-            axios.get(url)
-                .then((res) => {
-                    html += `<img src= ${src}>`;
-                })
-                .catch((e) => {
-                    console.log(e);
-                })
-
-    return html;
-    })
-    .catch((e) =>{
-        console.log(e);
-    });
-}
