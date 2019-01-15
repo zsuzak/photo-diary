@@ -26,12 +26,10 @@ app.get('/', async (req, res) => {
                     images += `<img class="right" src="${src}">`;
                 }
             }
-            // console.log(images);
         })
         .catch((e) => {
             console.log(e);
         })
-
     res.render('home.hbs', {images});
 });
 
