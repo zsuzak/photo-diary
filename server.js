@@ -1,9 +1,3 @@
-// Key:
-// 3f512a426170f3b1734a0f4d2dbf5048
-
-// Secret:
-// 7a23164b892572de
-
 const express = require('express');
 const hbs = require('hbs');
 const axios = require('axios');
@@ -11,7 +5,7 @@ const axios = require('axios');
 const port = process.env.PORT || 3000;
 
 let app = express();
-let html;
+let images;
 let urls = [];
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -26,19 +20,19 @@ app.get('/', async (req, res) => {
             for (let i = 0; i < res.data.photos.photo.length; i++) {
                 let src = res.data.photos.photo[i].url_l;
                 if (i%2 == 0 ) {
-                    html += `<img class="left" src="${src}">`;
+                    images += `<img class="left" src="${src}">`;
                 }
                 else {
-                    html += `<img class="right" src="${src}">`;
+                    images += `<img class="right" src="${src}">`;
                 }
             }
-            // console.log(html);
+            // console.log(images);
         })
         .catch((e) => {
             console.log(e);
         })
 
-    res.render('home.hbs', {html});
+    res.render('home.hbs', {images});
 });
 
 app.get('/about', (req, res) => {
