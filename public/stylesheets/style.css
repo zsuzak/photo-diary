@@ -34,7 +34,7 @@ p {
 }
 
 img {
-    height: auto;
+    height: 100%;
     width: 100%;
     margin-bottom: 3%;
     filter: grayscale(100%);
