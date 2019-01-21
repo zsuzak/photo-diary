@@ -12,10 +12,12 @@ body {
 }
 
 h1 {
+    font-family: 'Garamond','Times','Times New Roman';
+    font-style: italic;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 10px;
     margin-bottom: 0px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: bold;
     font-size: 20px;
 }
