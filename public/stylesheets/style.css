@@ -29,7 +29,8 @@ h1 {
 }
 
 p {
-    margin-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 15px;
     text-align: center;
     font-size: 15px;
 }
@@ -38,7 +39,7 @@ img {
     height: auto;
     margin-left: 38%;
     margin-right: 38%;
-    margin-bottom: 1.5%;
+    /* margin-bottom: 1.5%; */
     width: 24%;
     filter: grayscale(100%);
 }
