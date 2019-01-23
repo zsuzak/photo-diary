@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-    font-family: 'Garamond','Times','Times New Roman';
+    font-family: 'Garamond', 'Times New Roman', 'Times';
     font-style: italic;
     text-align: center;
     margin-top: 10px;
@@ -23,28 +23,17 @@ h1 {
 }
 
 p {
-    margin: 0px;
+    margin-bottom: 5px;
     text-align: center;
     font-size: 15px;
 }
 
-.left {
-    margin-left: 26%;
-    margin-right: 1%;
-    float: left;
-    width: 23%;
-}
-.right {
-    margin-left: 1%;
-    margin-right: 26%;
-    float: right;
-    width: 23%;
-}
-
 img {
     height: auto;
-    width: 100%;
-    margin-bottom: 6%;
+    margin-left: 38%;
+    margin-right: 38%;
+    margin-bottom: 1.5%;
+    width: 24%;
     filter: grayscale(100%);
 }
 

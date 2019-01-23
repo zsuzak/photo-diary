@@ -17,22 +17,11 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', async (req, res) => {
     await axios.get('https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=3f512a426170f3b1734a0f4d2dbf5048&user_id=161576192@N05&extras=url_l%2C+date_taken&per_page=999&format=json&nojsoncallback=1')
         .then((res) => {
-            images += `<div class="left">`;
-            for (let i = 0; i < res.data.photos.photo.length; i+=2) {
+            for (let i = 0; i < res.data.photos.photo.length; i++) {
                 let src = res.data.photos.photo[i].url_l;
                 let date_taken = res.data.photos.photo[i].datetaken;
                 images += `<img src="${src}">`;
-                //images += `<p>${date_taken}</p>`;
             }
-            images += `</div>`;
-            images += `<div class="right">`;
-            for (let i = 1; i < res.data.photos.photo.length; i+=2) {
-                let src = res.data.photos.photo[i].url_l;
-                let date_taken = res.data.photos.photo[i].datetaken;
-                images += `<img src="${src}">`;
-                //images += `<p>${date_taken}</p>`;
-            }
-            images += `</div>`;
         })
         .catch((e) => {
             console.log(e);
