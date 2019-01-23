@@ -24,8 +24,9 @@ app.get('/', async (req, res) => {
             for (let i = 0; i < pics.length; i++) {
                 let src = pics[i].url_l;
                 let date_taken = pics[i].datetaken;
+                let printDate = date_taken.substring(0,10);
                 images += `<img src="${src}">`;
-                images += `<p>${date_taken}</p>`;
+                images += `<p>${printDate}</p>`;
             }
         })
         .catch((e) => {
