@@ -18,13 +18,13 @@ body {
 }
 
 h1 {
-    font-family: 'Garamond', 'Times New Roman', 'Times';
+    font-family: 'Baskerville Old Face', 'Baskerville', 'Garamond', 'Times New Roman', 'Times';
     font-style: italic;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 0px;
     /* text-transform: uppercase; */
-    font-weight: bold;
+    font-weight: normal;
     font-size: 20px;
 }
 
@@ -32,7 +32,13 @@ p {
     margin-top: 0;
     margin-bottom: 15px;
     text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#about {
     font-size: 15px;
+    font-weight: normal;
 }
 
 img {
@@ -58,9 +64,14 @@ ul.nav li {
   text-align: center;
   display: inline;
   font-size: 11px;
+  padding-right: 8px;
 }
 
 a {
 	text-decoration: none;
 	color: black;
+}
+
+#act {
+    text-decoration: underline;
 }
