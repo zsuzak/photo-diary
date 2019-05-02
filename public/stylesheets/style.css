@@ -47,6 +47,7 @@ img {
     margin-right: 38%;
     width: 24%;
     filter: grayscale(100%);
+    -webkit-transition : -webkit-filter 500ms linear;
 }
 
 ul.nav {

@@ -1,5 +1,24 @@
     <script>
-            document.querySelector('a[href^="/' + location.pathname.split("/")[1] + '"]').classList.add('active');
-        </script>
+        document.querySelector('a[href^="/' + location.pathname.split("/")[1] + '"]').classList.add('active');
+
+        var toggle = false;
+        function filterToggle() {
+            console.log(toggle);
+            var imageList = document.querySelectorAll("img");
+
+            if (toggle) {
+                imageList.forEach(function(image) {
+                    image.style.filter = "grayscale(100%)";
+                });
+            }
+            else {
+                imageList.forEach(function(image) {
+                    image.style.filter = "grayscale(0%)";
+                });
+            }
+
+            toggle = !toggle;
+        }
+    </script>
 </body>
 </html>

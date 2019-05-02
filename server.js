@@ -23,7 +23,7 @@ app.get('/', async (req, res) => {
                 let src = pics[i].url_l;
                 let date_taken = pics[i].datetaken;
                 let printDate = date_taken.substring(0,10);
-                images += `<img src="${src}">`;
+                images += `<img src="${src}" onclick="filterToggle()"">`;
                 images += `<p>${printDate}</p>`;
             }
         })
